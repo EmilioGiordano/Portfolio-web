@@ -96,10 +96,8 @@ button {
     max-width: 100%;
     height: auto;
     display: block;
-    /* Convertir a escala de grises oscura como en Meta - desde gris muy oscuro hasta gris medio claro */
-    filter: grayscale(100%) brightness(0.4) contrast(2) saturate(0);
-    /* Ajustes adicionales para que coincida con Meta */
-    opacity: 0.95;
+    /* Convertir a escala de grises oscura: #1c1c1c -> #a3a3a3 */
+    filter: grayscale(100%) brightness(0.35) contrast(1.8);
     /* Asegurar que los bordes redondeados se apliquen a los cuadrados internos */
     border-radius: 4px;
 }
@@ -146,6 +144,5 @@ button {
     width: 10px;
     height: 10px;
     border-radius: 2px;
-    /* Los colores se aplican inline, pero aplicamos grayscale para que sean grises */
-    filter: grayscale(100%) brightness(0.4) contrast(2);
+    /* Sin filtros - los colores grises ya están aplicados inline en el HTML */
 }
