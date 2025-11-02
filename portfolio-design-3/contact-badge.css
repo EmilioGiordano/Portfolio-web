@@ -1,0 +1,65 @@
+/* Estilos para los badges de contacto */
+
+/* Variables CSS para los colores */
+:root {
+    --color-button-bg: #252525;
+    --color-border-dark: #474747;
+    --color-text: #d7d7d7;
+    --color-svg: #a1a1a1;
+    --color-shadow-inset: rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor de los badges */
+.social-links {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 8px; /* gap-2 equivalente a 8px (0.5rem) */
+    margin-top: 12px;
+}
+
+/* Estilo de cada badge */
+.social-badge {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 4px; /* gap-1 equivalente a 4px (0.25rem) */
+    border: 1px solid var(--color-border-dark);
+    background-color: var(--color-button-bg);
+    color: var(--color-text);
+    font-family: 'Figtree', 'Figtree Fallback', sans-serif;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    /* Sombra: 0px_0px_0px_1px_rgba(0,0,0,0),inset_0px_1px_1px_0px_var(--color-shadow-inset) */
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0), 
+                inset 0px 1px 1px 0px var(--color-shadow-inset);
+}
+
+/* Estados hover y active */
+.social-badge:hover {
+    background-color: #2d2d2d;
+    border-color: #555555;
+}
+
+.social-badge:active {
+    box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.4),
+                inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    transform: translateY(1px);
+}
+
+/* Estilo para SVGs dentro de los badges (si se agregan iconos en el futuro) */
+.social-badge svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--color-svg);
+    stroke: var(--color-svg);
+}
+
+/* Asegurar que el texto no se subraye */
+.social-badge:visited {
+    color: var(--color-text);
+}
+
