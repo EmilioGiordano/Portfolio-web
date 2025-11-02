@@ -89,6 +89,8 @@ button {
     /* Contenedor con overflow para aplicar bordes redondeados */
     overflow: hidden;
     border-radius: 4px;
+    /* Recortar la parte izquierda donde aparecen "Mon Wed Fri" */
+    position: relative;
 }
 
 .contribution-grid-img {
@@ -100,6 +102,12 @@ button {
     filter: grayscale(100%) brightness(0.35) contrast(1.8);
     /* Asegurar que los bordes redondeados se apliquen a los cuadrados internos */
     border-radius: 4px;
+    /* Recortar la parte izquierda donde están las etiquetas de días (Mon Wed Fri) */
+    object-position: right center;
+    /* Ajustar para ocultar aproximadamente 50-60px de la izquierda donde están las etiquetas */
+    clip-path: inset(0 0 0 50px);
+    margin-left: -50px;
+    width: calc(100% + 50px);
 }
 
 .contributions-info {
