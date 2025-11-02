@@ -1,0 +1,151 @@
+body {	
+    background-color: #111010;
+    color: #a1a1a1;
+    font-family: 'Figtree', 'Figtree Fallback', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 672px;
+    margin: 0 auto;
+    padding: 32px 16px 60px;
+}
+
+/* Espaciado entre secciones */
+section {
+    margin-top: 0;
+}
+
+section + section {
+    margin-top: 48px;
+}
+
+* {
+    font-family: 'Figtree', 'Figtree Fallback', sans-serif;
+}
+
+a {
+    color: #a1a1a1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #a1a1a1;
+}
+
+p {
+    color: #a1a1a1;
+}
+
+span {
+    color: #a1a1a1;
+}
+
+button {
+    color: #a1a1a1;
+}
+
+/* Barra separadora */
+.separator-bar {
+    width: 80px;
+    height: 1px;
+    background: linear-gradient(to right, #ffffff, transparent);
+    margin-top: 2px;
+    margin-bottom: 24px;
+}
+
+/* Elementos que deben permanecer en blanco */
+.intro-section h1 {
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.contact-section p {
+    color: #ffffff;
+}
+
+.story-section h2 {
+    color: #ffffff;
+}
+
+/* Estilos del widget de GitHub */
+.github-section {
+    margin-top: 48px;
+}
+
+.month-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.month {
+    font-size: 12px;
+    color: #a1a1a1;
+}
+
+.contributions-chart {
+    margin: 12px 0;
+    /* Contenedor con overflow para aplicar bordes redondeados */
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.contribution-grid-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Convertir a escala de grises oscura como en Meta - desde gris muy oscuro hasta gris medio claro */
+    filter: grayscale(100%) brightness(0.4) contrast(2) saturate(0);
+    /* Ajustes adicionales para que coincida con Meta */
+    opacity: 0.95;
+    /* Asegurar que los bordes redondeados se apliquen a los cuadrados internos */
+    border-radius: 4px;
+}
+
+.contributions-info {
+    margin-top: 12px;
+}
+
+.contributions-count {
+    font-size: 16px;
+    margin: 0 0 8px 0;
+}
+
+.contributions-count .count-number,
+.contributions-count .count-word {
+    color: #ffffff;
+}
+
+.contributions-count .count-rest {
+    color: #a1a1a1;
+}
+
+.contributions-legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #a1a1a1;
+    margin-top: 4px;
+}
+
+.legend-text {
+    font-size: 12px;
+    color: #a1a1a1;
+}
+
+.legend-squares {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.legend-square {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    /* Los colores se aplican inline, pero aplicamos grayscale para que sean grises */
+    filter: grayscale(100%) brightness(0.4) contrast(2);
+}
