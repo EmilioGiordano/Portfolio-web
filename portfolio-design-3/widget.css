@@ -1,0 +1,86 @@
+/* Estilos del widget de GitHub */
+.github-section {
+    margin-top: 48px;
+}
+
+.month-selector {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.month {
+    font-size: 12px;
+    color: #a1a1a1;
+}
+
+.contributions-chart {
+    margin: 12px 0;
+    /* Contenedor con overflow para aplicar bordes redondeados */
+    overflow: hidden;
+    border-radius: 4px;
+    /* Recortar la parte izquierda donde aparecen "Mon Wed Fri" */
+    position: relative;
+}
+
+.contribution-grid-img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Convertir a escala de grises oscura: #1c1c1c -> #a3a3a3 */
+    filter: grayscale(100%) brightness(0.35) contrast(1.8);
+    /* Asegurar que los bordes redondeados se apliquen a los cuadrados internos */
+    border-radius: 4px;
+    /* Recortar la parte izquierda donde están las etiquetas de días (Mon Wed Fri) */
+    object-position: right center;
+    /* Ajustar para ocultar aproximadamente 50-60px de la izquierda donde están las etiquetas */
+    clip-path: inset(0 0 0 50px);
+    margin-left: -50px;
+    width: calc(100% + 50px);
+}
+
+.contributions-info {
+    margin-top: 12px;
+}
+
+.contributions-count {
+    font-size: 16px;
+    margin: 0 0 8px 0;
+}
+
+.contributions-count .count-number,
+.contributions-count .count-word {
+    color: #ffffff;
+}
+
+.contributions-count .count-rest {
+    color: #a1a1a1;
+}
+
+.contributions-legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #a1a1a1;
+    margin-top: 4px;
+}
+
+.legend-text {
+    font-size: 12px;
+    color: #a1a1a1;
+}
+
+.legend-squares {
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.legend-square {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    /* Sin filtros - los colores grises ya están aplicados inline en el HTML */
+}
