@@ -22,9 +22,11 @@
 .social-badge {
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     gap: 4px; /* gap-1 equivalente a 4px (0.25rem) */
     border: 1px solid var(--color-border-dark);
+    min-width: 100px;
     /* Gradiente sutil para efecto de brillo en la parte superior */
     background: linear-gradient(to bottom, 
         rgba(255, 255, 255, 0.05) 0%, 
