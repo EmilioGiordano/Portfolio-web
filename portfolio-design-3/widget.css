@@ -49,13 +49,14 @@
     margin: 0 0 8px 0;
 }
 
-.contributions-count .count-number,
-.contributions-count .count-word {
-    color: #ffffff;
+.contributions-count .contributions-text {
+    color: #a1a1a1;
 }
 
-.contributions-count .count-rest {
-    color: #a1a1a1;
+/* Hacer que el número y "contributions" sean blancos */
+.contributions-count .contributions-text::before {
+    content: attr(data-count) " contributions ";
+    color: #ffffff;
 }
 
 .contributions-legend {

@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Obtener el total de contribuciones usando múltiples servicios
             const fetchContributions = async () => {
-                const countNumber = document.querySelector('.count-number');
-                if (!countNumber) return;
+                const contributionsText = document.querySelector('.contributions-text');
+                if (!contributionsText) return;
                 
                 // Servicio 1: github-readme-stats API (puede incluir contribuciones)
                 try {
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         // El formato puede variar, intentemos diferentes propiedades
                         const total = data.totalContributions || data.contributions?.total || data.total;
                         if (total !== undefined) {
-                            countNumber.textContent = total.toLocaleString();
+                            contributionsText.setAttribute('data-count', total.toLocaleString());
                             return;
                         }
                     }
@@ -57,9 +57,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Si todos fallan, dejar mensaje en consola
                 console.warn('⚠️ No se pudo obtener el número de contribuciones automáticamente.');
-                console.info('💡 Actualiza manualmente el número en index.html línea ~73');
-                console.info('   Cambia: <span class="count-number">0</span>');
-                console.info('   Por ejemplo: <span class="count-number">878</span>');
+                console.info('💡 Actualiza manualmente el número en index.html');
+                console.info('   Cambia: <span class="contributions-text" data-count="0">');
+                console.info('   Por ejemplo: <span class="contributions-text" data-count="878">');
             };
             
             // Ejecutar después de que la imagen se cargue
