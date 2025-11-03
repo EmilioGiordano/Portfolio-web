@@ -15,7 +15,7 @@
 }
 
 .contributions-chart {
-    margin: 12px 0;
+    margin: 12px 0 0 0;
     /* Contenedor con overflow para aplicar bordes redondeados */
     overflow: hidden;
     border-radius: 4px;
@@ -41,7 +41,7 @@
 }
 
 .contributions-info {
-    margin-top: 12px;
+    margin-top: 4px;
 }
 
 .contributions-count {
@@ -50,13 +50,9 @@
 }
 
 .contributions-count .contributions-text {
-    color: #a1a1a1;
-}
-
-/* Hacer que el número y "contributions" sean blancos */
-.contributions-count .contributions-text::before {
-    content: attr(data-count) " contributions ";
-    color: #ffffff;
+    color: #868686;
+    font-size: 10px;
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 .contributions-legend {

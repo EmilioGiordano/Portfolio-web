@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         // El formato puede variar, intentemos diferentes propiedades
                         const total = data.totalContributions || data.contributions?.total || data.total;
                         if (total !== undefined) {
-                            contributionsText.setAttribute('data-count', total.toLocaleString());
+                            contributionsText.textContent = `${total.toLocaleString()} contributions in the last year.`;
                             return;
                         }
                     }
