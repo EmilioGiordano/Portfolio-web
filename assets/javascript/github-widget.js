@@ -5,7 +5,6 @@ const GITHUB_USERNAME = 'EmilioGiordano';
 document.addEventListener('DOMContentLoaded', function() {
     if (GITHUB_USERNAME && GITHUB_USERNAME.trim() !== '') {
         const contributionsImg = document.getElementById('github-contributions-img');
-        const contributionsCount = document.querySelector('.contributions-count');
         
         if (contributionsImg) {
             // Usar un servicio que genere el gráfico directamente en escala de grises o modo oscuro
