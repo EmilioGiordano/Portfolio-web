@@ -16,21 +16,16 @@
 
 .contributions-chart {
     margin: 12px 0 0 0;
-    /* Contenedor con overflow para aplicar bordes redondeados y recortar la parte izquierda */
+    /* Contenedor con overflow para aplicar bordes redondeados */
     overflow: hidden;
     border-radius: 4px;
     /* Recortar la parte izquierda donde aparecen "Mon Wed Fri" */
     position: relative;
-    /* Asegurar que el contenedor tenga el ancho completo */
-    width: 100%;
 }
 
 .contribution-grid-img {
-    /* Aumentar el ancho para compensar el recorte de 50px de la izquierda */
-    /* Usar un ancho mayor para asegurar que después del clip-path el grid visible ocupe el 100% */
-    width: calc(100% + 50px);
-    min-width: calc(100% + 50px);
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
     /* Convertir a escala de grises oscura: #1c1c1c -> #a3a3a3 */
@@ -38,12 +33,11 @@
     /* Asegurar que los bordes redondeados se apliquen a los cuadrados internos */
     border-radius: 4px;
     /* Recortar la parte izquierda donde están las etiquetas de días (Mon Wed Fri) */
-    /* Ajustar para ocultar aproximadamente 50px de la izquierda donde están las etiquetas */
+    object-position: right center;
+    /* Ajustar para ocultar aproximadamente 50-60px de la izquierda donde están las etiquetas */
     clip-path: inset(0 0 0 50px);
-    /* Mover la imagen 50px a la izquierda para que el recorte quede alineado */
-    transform: translateX(-50px);
-    /* Asegurar que el grid visible ocupe exactamente el 100% del ancho del contenedor */
-    /* El contenido visible después del clip-path debería alinearse con el borde derecho del contenedor */
+    margin-left: -50px;
+    width: calc(100% + 50px);
 }
 
 .contributions-info {
@@ -54,11 +48,15 @@
     width: 100%;
 }
 
-.contributions-text {
+.contributions-count {
+    font-size: 16px;
+    margin: 0;
+}
+
+.contributions-count .contributions-text {
     color: #868686;
     font-size: 10px;
     font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-    text-align: left;
 }
 
 .contributions-legend {
